@@ -8,16 +8,18 @@ import sys
 
 from selenium.webdriver.chrome.options import Options
 
+from webdriver_manager.chrome import ChromeDriverManager
+
 options = Options()
 options.add_argument("user-data-dir=/home/adi/.config/google-chrome/Default") #Replace with absolute chromedriver path in your computer
 
-driver = webdriver.Chrome(r'/home/adi/Downloads/chromedriver',chrome_options=options)
+driver = webdriver.Chrome(ChromeDriverManager().install(),chrome_options=options)
 driver.get("https://web.whatsapp.com/")
 	        # time.sleep()
 wait = WebDriverWait(driver, 600)
 for i in range(0,100):
-	target = '"Abhishek"' #Name of target to be spammed
-	string = "LOL" #Message to be sent
+	target = '"Shreya Raghunandan"' #Name of target to be spammed
+	string = "Sup girl" #Message to be sent
 	x_arg = '//span[contains(@title,' + target + ')]'
 	group_title = wait.until(EC.presence_of_element_located((
 	By.XPATH, x_arg)))
