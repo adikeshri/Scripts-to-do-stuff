@@ -18,8 +18,8 @@ driver.get("https://web.whatsapp.com/")
 	        # time.sleep()
 wait = WebDriverWait(driver, 600)
 for i in range(0,100):
-	target = '"Shreya Raghunandan"' #Name of target to be spammed
-	string = "Sup girl" #Message to be sent
+	target = '"Abhishek"' #Name of target to be spammed
+	string = "Sup" #Message to be sent
 	x_arg = '//span[contains(@title,' + target + ')]'
 	group_title = wait.until(EC.presence_of_element_located((
 	By.XPATH, x_arg)))
